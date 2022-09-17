@@ -102,7 +102,7 @@ h1.title {
     }
     .blogs {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 325px);
+        grid-template-rows: repeat(4, 325px);
     }
     .post {
         grid-template-rows: 120px 157px;
@@ -118,7 +118,7 @@ h1.title {
     }
     .blogs {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 245px);
+        grid-template-rows: repeat(5, 245px);
     }
     .post {
         grid-template-rows: 95px 125px;
