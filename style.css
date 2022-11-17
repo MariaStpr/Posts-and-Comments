@@ -78,9 +78,22 @@ h1.title {
     color: #fff;
 }
 
+.back-btn {
+    border: 1px solid #7e7878;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    background-color: #0061ab;
+    color: #fff;
+    font-size: 16px;
+    width: 100px;
+    height: 30px;
+}
+
 .user {
     font-size: 18px;
     font-weight: 900;
+    margin: 10px 0 0 0;
 }
 
 .mail {

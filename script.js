@@ -23,14 +23,17 @@ const handler = (event) => {
 
     const blockComments = createNode('div');
     const commentTitle = createNode('h4');
+    const buttonBack = createNode('button');
 
     blockComments.classList.add('comments');
     commentTitle.classList.add('comment__title');
+    buttonBack.classList.add('back-btn');
 
     append(newBlock, blockComments);
     append(blockComments, commentTitle);
 
     commentTitle.textContent = 'Комментарии';
+    buttonBack.textContent = 'Назад';
 
     postComment.forEach((element) => {
       const name = createNode('div');
@@ -49,8 +52,19 @@ const handler = (event) => {
       email.textContent = element.email;
       message.textContent = element.body;
     });
+    append(blockComments, buttonBack);
 
-    newBlock.removeEventListener('click', handler);
+    // if (newBlock.querySelectorAll('.comments') !== null) {
+    //   newBlock.removeEventListener('click', handler);
+    // }
+    const btns = document.querySelectorAll('.back-btn');
+    btns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const parent = e.target.parentNode;
+        parent.remove();
+      });
+    });
   };
 
   getInfo(commentLink, setComments);
